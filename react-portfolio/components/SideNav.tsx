@@ -9,6 +9,7 @@ export default function SideNav() {
     const elementsNavigation = [
         { href: "/#accueil", label: "Accueil" },
         { href: "/#todo", label: "TODO" },
+        { href: "/#competences", label: "Compétences" },
         { href: "/#veille", label: "Veille IA" },
         { href: "/#parcours", label: "Parcours" },
         { href: "/#projets", label: "Projets" },

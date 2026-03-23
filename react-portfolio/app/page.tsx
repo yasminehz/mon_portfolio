@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  lienTableauCompetences,
   parcoursPortfolio,
   projetsPortfolio,
   todosPortfolio,
@@ -26,6 +27,21 @@ export default function Home() {
           {todosPortfolio.map((todo) => (
             <p key={todo}>{todo}</p>
           ))}
+        </div>
+      </section>
+
+      <section id="competences" className="competences">
+        <div className="container">
+          <h2>Tableau de compétence</h2>
+          <p>Accède à mon tableau de compétence complet via le lien ci-dessous.</p>
+          <a
+            href={lienTableauCompetences}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+          >
+            Ouvrir le tableau de compétence
+          </a>
         </div>
       </section>
 
