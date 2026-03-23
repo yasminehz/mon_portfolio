@@ -58,6 +58,8 @@ export const todosPortfolio = [
   "stage deuxieme année",
 ];
 
+export const lienTableauCompetences = "https://docs.google.com/spreadsheets/d/1_8q-UGLzlTKc0yV5ZL1HGw9lEXuxF7RbN6p96MC2bOU/edit?usp=sharing";
+
 export const veilleTechnologiquePortfolio: ItemVeilleTechnologique[] = [
   {
     titre: "Diagnostic assiste par l'IA",
@@ -134,7 +136,7 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Un site web pour une bibliothèque avec un catalogue de livres, gestion d'utilisateurs et des emprunts.",
     tags: ["HTML", "CSS", "PHP", "MySQL"],
     descriptionLongue:
-      "Projet complet d'une plateforme web pour une bibliothèque municipale. Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer l'inventaire, les emprunts et les retours.",
+      "https://4223.s5.nuage-peda.fr/projetSIO2Hop/index.php?action=livres Projet complet d'une plateforme web pour une bibliothèque municipale. Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer l'inventaire, les emprunts et les retours.",
     fonctionnalites: [
       "Catalogue de livres avec recherche avancée",
       "Système d'authentification utilisateur",
