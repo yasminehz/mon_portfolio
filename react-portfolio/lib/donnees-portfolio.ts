@@ -130,13 +130,12 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Un site web pour une bibliothèque avec un catalogue de livres, gestion d'utilisateurs et des emprunts.",
     tags: ["HTML", "CSS", "PHP", "MySQL"],
     descriptionLongue:
-      "Projet complet d'une plateforme web pour une bibliothèque municipale. Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer l'inventaire, les emprunts et les retours.",
+      "Projet complet d'une plateforme web pour une bibliothèque d'un hôpital. Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer les emprunts et les retours.",
     fonctionnalites: [
-      "Catalogue de livres avec recherche avancée",
       "Système d'authentification utilisateur",
+      "Catalogue de livres avec recherche avancée sur plusieurs filtres",
       "Gestion des emprunts et retours",
       "Historique des emprunts",
-      "Notifications de rappel",
     ],
     images: ["biblio", "recherche", "lecture", "utilisateur"],
     github: "https://github.com",
@@ -149,7 +148,7 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Application de gestion de RDV médicaux. Gestion des utilisateurs patients et médecins, prise de rendez-vous en ligne.",
     tags: ["HTML", "CSS", "Symfony", "MySQL", "React Native"],
     descriptionLongue:
-      "Plateforme web et mobile pour la gestion de rendez-vous médicaux. Les patients peuvent prendre rendez-vous avec des médecins, consulter leur historique et recevoir des confirmations. Les médecins gèrent leur agenda et les patients. L'application mobile appelle des API de l'application web pour une synchronisation des données en temps réel. L'application a été développée avec Symfony pour le backend et une application mobile React Native pour l'interface patient.",
+      "Plateforme web et mobile pour la gestion de rendez-vous médicaux. Les patients peuvent prendre rendez-vous avec des médecins, consulter leur historique. Les médecins gèrent leur disponibilités et les patients. Les assistants gèrent les demandes de son médecin associé. L'application mobile appelle des API de l'application web pour une synchronisation des données en temps réel. L'application a été développée avec Symfony pour le backend et une application mobile React Native pour l'interface patient.",
     fonctionnalites: [
       "Prise de rendez-vous en ligne",
       "Enregistrement des indisponibilités des médecins",
@@ -167,12 +166,11 @@ export const projetsPortfolio: ProjetPortfolio[] = [
     tags: ["HTML", "CSS", "JavaScript"],
     descriptionLongue:
 
-      " https://yasminehz.github.io/comparateur-prix-ECA/ Outil interactif pour les pâtissiers permettant de calculer le prix de vente optimal en fonction des coûts des matières premières. L'application prend en compte les marges bénéficiaires et le temps de préparation.",
+      "https://yasminehz.github.io/comparateur-prix-ECA/ Outil interactif pour les pâtissiers permettant de calculer le prix de vente d'un gâteau en fonction des coûts des matières premières. L'application prend en compte les marges bénéficiaires et le temps de préparation.",
     fonctionnalites: [
       "Calcul automatique des coûts",
       "Gestion de la marge bénéficiaire",
       "Export des données",
-      "Historique des calculs",
       "Interface intuitive et rapide",
     ],
     images: ["cupcake", "prix", "statistiques", "gateau"],
@@ -183,16 +181,14 @@ export const projetsPortfolio: ProjetPortfolio[] = [
     id: 4,
     titre: "Site vitrine d'une boutique",
     description:
-      "Site vitrine pour une entreprise de vente de gâteau et patisseries avec catalogue de produits, page d'avis et formulaire de contact.",
+      " Site vitrine pour une entreprise de vente de gâteau et patisseries avec catalogue de produits, page d'avis et formulaire de contact.",
     tags: ["HTML", "CSS"],
     descriptionLongue:
-      "https://yasminehz.github.io/Letablierose/index.html Site professionnel pour une pâtisserie locale. Les clients peuvent découvrir les produits, lire les avis, consulter les horaires d'ouverture et contacter directement le commerce via un formulaire.",
+      "https://yasminehz.github.io/Letablierose/index.html Site statique pour une pâtisserie fictive. Les clients peuvent découvrir les produits, découvrir l'histoire derrière la marque, lire les avis, consulter les horaires d'ouverture.",
     fonctionnalites: [
       "Catalogue de produits avec photos",
       "Système d'avis clients",
-      "Formulaire de contact",
       "Informations de localisation",
-      "Galerie de projets personnalisés",
     ],
     images: ["vitrine", "dessert", "avis", "contact"],
     github: "https://github.com",
@@ -205,11 +201,11 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Projet academique realise en stage chez Ateja : contribution au developpement d'une application CRM web.",
     tags: ["Laravel", "Vue.js", "MySQL", "HTML", "CSS"],
     descriptionLongue:
-      "Pendant mon stage chez Ateja, j'ai participe au developpement d'une application CRM d'entreprise. J'ai travaille sur des modules de gestion de dépendances composer, la gestion de suivi des migrations et l'ajout de condition à la saisie de champs d'un formulaire. J'ai aussi collabore avec l'equipe sur des besoins metiers reels, en utilisant Git pour le versioning et la gestion de projet.",
+      "Pendant mon stage chez Ateja, j'ai participé au developpement d'une application CRM d'entreprise. J'ai travaille sur des modules de gestion de dépendances composer, la gestion de suivi des migrations et l'ajout de condition à la saisie de champs d'un formulaire.",
     fonctionnalites: [
       "Participation au developpement de modules CRM",
       "Suivi des demandes et organisation des donnees clients",
-      "Collaboration en equipe sur des besoins metiers reels",
+      "Collaboration en équipe sur des besoins métiers réels",
     ],
     images: ["partage", "validation"],
     github: "https://github.com",
