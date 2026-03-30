@@ -47,48 +47,42 @@ export type ItemVeilleTechnologique = {
 };
 
 export const todosPortfolio = [
-  "App biblio",
-  "App comparateur de sab",
-  "App gestion rdv",
-  "veille ia et medecine",
+  "ajouter liens demo",
   "tableau compétence",
-  "App tablier rose formation btech https://yasminehz.github.io/Letablierose/index.html",
-  "App mobile course",
-  "stage premiere année",
-  "stage deuxieme année",
+  "refaire desc des projets"
 ];
 
 export const lienTableauCompetences = "https://docs.google.com/spreadsheets/d/1_8q-UGLzlTKc0yV5ZL1HGw9lEXuxF7RbN6p96MC2bOU/edit?usp=sharing";
 
 export const veilleTechnologiquePortfolio: ItemVeilleTechnologique[] = [
   {
-    titre: "Diagnostic assiste par l'IA",
+    titre: "IA et services de santé : tchnologies utilisées",
     resume:
-      "Les modeles d'IA aident les professionnels de sante a detecter plus vite certaines anomalies sur des images medicales.",
+      "L'IA en santé repose sur plusieurs technologies clés qui permettent d'analyser des données complexes et d'aider à la décision médicale.",
     pointsCles: [
-      "Analyse d'images en radiologie et dermatologie",
-      "Aide a la decision, sans remplacer le medecin",
-      "Besoin de validation clinique continue",
+      "Machine learning : apprentissage sur des images et resultats de laboratoire pour predire des risques et recommander des actions",
+      "Traitement automatique du langage (NLP) : analyse des comptes rendus et courriers pour extraire des informations utiles ou résumer un dossier",
+      "Modèles géneratifs : production de données ou d'images synthétiques pour entrainer d'autres modèles et simuler des cas cliniques",
     ],
   },
   {
-    titre: "Medecine personnalisee",
+    titre: "Principales applications de l'IA en santé",
     resume:
-      "L'IA facilite l'analyse de grandes quantites de donnees pour adapter les traitements au profil du patient.",
+      "L'IA est déjà utilisée dans plusieurs situations médicales pour accélerer l'analyse et renforcer l'aide a la décision.",
     pointsCles: [
-      "Croisement donnees biologiques et historiques patients",
-      "Prediction des reponses aux traitements",
-      "Suivi plus fin de l'evolution clinique",
+      "Aide au diagnostic : détection de tumeurs sur scanners, classification de lesions cutanées, dépistage de la rétinopathie diabétique",
+      "Médecine prédictive : estimation du risque de sepsis, de décompensation en reanimation et de readmission a l'hopital",
+      "Médecine personnalisée et organisation : recommandations adaptées au profil du patient, tri des examens, priorisation des dossiers, géneration de comptes rendus, télémédecine et suivi par capteurs",
     ],
   },
   {
-    titre: "Enjeux et vigilance",
+    titre: "Interêts, limites et enjeux",
     resume:
-      "L'usage de l'IA en medecine doit rester encadre pour proteger les patients et garantir la fiabilite des systemes.",
+      "L'IA apporte des gains concrets, mais son usage en santé doit rester rigoureusement encadré et valide dans le temps.",
     pointsCles: [
-      "Protection des donnees de sante",
-      "Reduction des biais algorithmiques",
-      "Transparence et explicabilite des modeles",
+      "Interêts : améliorer la précision et la rapidité des décisions médicales, décharger les soignants de tâches répétitives, favoriser une médecine plus personnalisee",
+      "Limites : qualité et biais des données, confidentialité et respect du cadre légal (consentement, anonymisation), sécurité et validation clinique continue",
+      "Role humain : l'IA reste un outil d'aide, la décision finale appartient toujours au professionnel de santé",
     ],
   },
 ];
@@ -136,7 +130,7 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Un site web pour une bibliothèque avec un catalogue de livres, gestion d'utilisateurs et des emprunts.",
     tags: ["HTML", "CSS", "PHP", "MySQL"],
     descriptionLongue:
-      "https://4223.s5.nuage-peda.fr/projetSIO2Hop/index.php?action=livres Projet complet d'une plateforme web pour une bibliothèque municipale. Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer l'inventaire, les emprunts et les retours.",
+      "Projet complet d'une plateforme web pour une bibliothèque municipale. Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer l'inventaire, les emprunts et les retours.",
     fonctionnalites: [
       "Catalogue de livres avec recherche avancée",
       "Système d'authentification utilisateur",
@@ -150,18 +144,16 @@ export const projetsPortfolio: ProjetPortfolio[] = [
   },
   {
     id: 2,
-    titre: "Application de gestion de RDV",
+    titre: "Application de gestion de RDV mobile et web",
     description:
       "Application de gestion de RDV médicaux. Gestion des utilisateurs patients et médecins, prise de rendez-vous en ligne.",
-    tags: ["HTML", "CSS", "Symfony", "MySQL"],
+    tags: ["HTML", "CSS", "Symfony", "MySQL", "React Native"],
     descriptionLongue:
-      "Plateforme web pour la gestion de rendez-vous médicaux. Les patients peuvent prendre rendez-vous avec des médecins, consulter leur historique et recevoir des confirmations. Les médecins gèrent leur agenda et les patients.",
+      "Plateforme web et mobile pour la gestion de rendez-vous médicaux. Les patients peuvent prendre rendez-vous avec des médecins, consulter leur historique et recevoir des confirmations. Les médecins gèrent leur agenda et les patients. L'application mobile appelle des API de l'application web pour une synchronisation des données en temps réel. L'application a été développée avec Symfony pour le backend et une application mobile React Native pour l'interface patient.",
     fonctionnalites: [
       "Prise de rendez-vous en ligne",
-      "Calendrier pour les médecins et patients",
-      "Notifications par email",
+      "Enregistrement des indisponibilités des médecins",
       "Gestion des dossiers médicaux",
-      "Système de rappel automatique",
     ],
     images: ["sante", "calendrier", "soignant", "traitement"],
     github: "https://github.com",
@@ -174,7 +166,8 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Application pour calculer le prix de vente de gâteaux en fonction des coûts des ingrédients",
     tags: ["HTML", "CSS", "JavaScript"],
     descriptionLongue:
-      "Outil interactif pour les pâtissiers permettant de calculer le prix de vente optimal en fonction des coûts des matières premières. L'application prend en compte les marges bénéficiaires et le temps de préparation.",
+
+      " https://yasminehz.github.io/comparateur-prix-ECA/ Outil interactif pour les pâtissiers permettant de calculer le prix de vente optimal en fonction des coûts des matières premières. L'application prend en compte les marges bénéficiaires et le temps de préparation.",
     fonctionnalites: [
       "Calcul automatique des coûts",
       "Gestion de la marge bénéficiaire",
@@ -193,7 +186,7 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Site vitrine pour une entreprise de vente de gâteau et patisseries avec catalogue de produits, page d'avis et formulaire de contact.",
     tags: ["HTML", "CSS"],
     descriptionLongue:
-      "Site professionnel pour une pâtisserie locale. Les clients peuvent découvrir les produits, lire les avis, consulter les horaires d'ouverture et contacter directement le commerce via un formulaire.",
+      "https://yasminehz.github.io/Letablierose/index.html Site professionnel pour une pâtisserie locale. Les clients peuvent découvrir les produits, lire les avis, consulter les horaires d'ouverture et contacter directement le commerce via un formulaire.",
     fonctionnalites: [
       "Catalogue de produits avec photos",
       "Système d'avis clients",
@@ -207,21 +200,48 @@ export const projetsPortfolio: ProjetPortfolio[] = [
   },
   {
     id: 5,
-    titre: "Appli mobile de liste de course",
+    titre: "Stage Ateja - CRM d'entreprise",
     description:
-      "Application mobile pour créer et gérer des listes de courses, avec gestion de compte.",
-    tags: ["HTML", "CSS", "ReactNative"],
+      "Projet academique realise en stage chez Ateja : contribution au developpement d'une application CRM web.",
+    tags: ["Laravel", "Vue.js", "MySQL", "HTML", "CSS"],
     descriptionLongue:
-      "Application mobile native permettant aux utilisateurs de créer et gérer des listes de courses en temps réel. Synchronisation cloud pour accéder à vos listes depuis n'importe quel appareil.",
+      "Pendant mon stage chez Ateja, j'ai participe au developpement d'une application CRM d'entreprise. J'ai travaille sur des modules de gestion de dépendances composer, la gestion de suivi des migrations et l'ajout de condition à la saisie de champs d'un formulaire. J'ai aussi collabore avec l'equipe sur des besoins metiers reels, en utilisant Git pour le versioning et la gestion de projet.",
     fonctionnalites: [
-      "Création et édition de listes",
-      "Synchronisation cloud",
-      "Partage de listes avec la famille",
-      "Gestion des catégories",
-      "Notification pour les articles manquants",
+      "Participation au developpement de modules CRM",
+      "Suivi des demandes et organisation des donnees clients",
+      "Collaboration en equipe sur des besoins metiers reels",
     ],
-    images: ["panier", "mobile", "validation", "partage"],
+    images: ["partage", "validation"],
     github: "https://github.com",
     live: "#",
   },
+
 ];
+
+export const imagesParProjet: Record<number, string[]> = {
+  1: [
+    "/projets/projet-2-bibliotheque/biblio-new-1.png",
+    "/projets/projet-2-bibliotheque/biblio-new-2.png",
+    "/projets/projet-2-bibliotheque/biblio-new-3.png",
+  ],
+  2: [
+    "/projets/projet-1-gestionRDV/rdv-new-1.png",
+    "/projets/projet-1-gestionRDV/rdv-new-2.png",
+    "/projets/projet-1-gestionRDV/rdv-new-3.png",
+    "/projets/projet-1-gestionRDV/rdv-new-4.png",
+    "/projets/projet-1-gestionRDV/rdv-new-5.png",
+    "/projets/projet-1-gestionRDV/Simulator Screenshot - iPhone 16e - 2026-03-27 at 10.23.45.png",
+    "/projets/projet-1-gestionRDV/Simulator Screenshot - iPhone 16e - 2026-03-27 at 10.23.54.png",
+    "/projets/projet-1-gestionRDV/Simulator Screenshot - iPhone 16e - 2026-03-27 at 10.26.37.png",
+    "/projets/projet-1-gestionRDV/Simulator Screenshot - iPhone 16e - 2026-03-27 at 10.26.43.png",
+  ],
+  3: ["/projets/projet-3-comparateur-prix/prix-new-1.png"],
+  4: [
+    "/projets/projet-4-tablier-rose/tablier-new-1.png",
+    "/projets/projet-4-tablier-rose/tablier-new-2.png",
+  ],
+  5: [
+    "/projets/projet-5-stage-ateja/Sans titre.png",
+    "/projets/projet-5-stage-ateja/Sans titre2.png",
+  ],
+};

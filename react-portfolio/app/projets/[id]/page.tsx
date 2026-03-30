@@ -12,6 +12,19 @@ type PageProps = {
   }>;
 };
 
+function extraireLienDepuisDescription(descriptionLongue: string): string | null {
+  const resultat = /https?:\/\/\S+/.exec(descriptionLongue);
+  return resultat?.[0] ?? null;
+}
+
+function nettoyerDescriptionLongue(descriptionLongue: string): string {
+  const lienTrouve = /https?:\/\/\S+/.exec(descriptionLongue)?.[0] ?? "";
+  return descriptionLongue
+    .replace(lienTrouve, "")
+    .replaceAll(/\s+/g, " ")
+    .trim();
+}
+
 export function generateStaticParams() {
   return projetsPortfolio.map((projet) => ({ id: String(projet.id) }));
 }
@@ -28,11 +41,14 @@ export default async function DetailProjetPage({ params }: PageProps) {
     notFound();
   }
 
+  const lienDemo = extraireLienDepuisDescription(projet.descriptionLongue);
+  const descriptionAffichee = nettoyerDescriptionLongue(projet.descriptionLongue);
+
   return (
     <main className="project-detail-page">
       <section className="project-detail">
         <div className="container detail-container">
-          <ProjetCarousel images={projet.images} />
+          <ProjetCarousel images={projet.images} projetId={projet.id} />
 
           <article className="project-info">
             <h1>{projet.titre}</h1>
@@ -47,7 +63,7 @@ export default async function DetailProjetPage({ params }: PageProps) {
 
             <div className="project-description-long">
               <h2>Description</h2>
-              <p>{projet.descriptionLongue}</p>
+              <p>{descriptionAffichee}</p>
             </div>
 
             <div className="project-features">
@@ -60,6 +76,16 @@ export default async function DetailProjetPage({ params }: PageProps) {
             </div>
 
             <div className="project-links-detail">
+              {lienDemo && (
+                <a
+                  className="btn-live"
+                  href={lienDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Demo
+                </a>
+              )}
 
 
               <Link className="btn btn-secondary" href="/#projets">
@@ -72,7 +98,7 @@ export default async function DetailProjetPage({ params }: PageProps) {
 
       <footer className="footer">
         <div className="container">
-          <p>© 2026 Mon Portfolio. Tous droits réservés.</p>
+          <p>© 2026 Yasmine Henni-Zourgui. Tous droits réservés.</p>
         </div>
       </footer>
     </main>

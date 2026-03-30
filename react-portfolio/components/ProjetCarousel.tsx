@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import type { CleImageProjet } from "@/lib/donnees-portfolio";
+import { imagesParProjet, type CleImageProjet } from "@/lib/donnees-portfolio";
 
 interface ProjetCarouselProps {
-    images: CleImageProjet[];
-    compact?: boolean;
+    readonly images: readonly CleImageProjet[];
+    readonly projetId?: number;
+    readonly compact?: boolean;
 }
 
 const classeIconeDetailParCle: Record<CleImageProjet, string> = {
@@ -31,15 +32,24 @@ const classeIconeDetailParCle: Record<CleImageProjet, string> = {
     partage: "icon-pixel-detail-partage",
 };
 
-export default function ProjetCarousel({ images, compact = false }: ProjetCarouselProps) {
+const PREFIXE_BASE = "/mon_portfolio";
+
+export default function ProjetCarousel({ images, projetId, compact = false }: ProjetCarouselProps) {
     const [indexCurrente, setIndexCurrente] = useState(0);
+    const cheminsImages = projetId ? imagesParProjet[projetId] ?? [] : [];
+    const utiliseImagesReelles = cheminsImages.length > 0;
+    const nombreSlides = utiliseImagesReelles ? cheminsImages.length : images.length;
+    const clesSlides = (utiliseImagesReelles ? cheminsImages : images) as readonly string[];
+    const urlImageCourante = utiliseImagesReelles
+        ? `${PREFIXE_BASE}${cheminsImages[indexCurrente]}`
+        : "";
 
     const allerPrecedent = () => {
-        setIndexCurrente((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+        setIndexCurrente((prev) => (prev === 0 ? nombreSlides - 1 : prev - 1));
     };
 
     const allerSuivant = () => {
-        setIndexCurrente((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+        setIndexCurrente((prev) => (prev === nombreSlides - 1 ? 0 : prev + 1));
     };
 
     const allerAIndex = (index: number) => {
@@ -48,14 +58,22 @@ export default function ProjetCarousel({ images, compact = false }: ProjetCarous
 
     return (
         <div className={`carousel-container ${compact ? "carousel-compact" : ""}`}>
-            <div className="carousel-main">
+            <div className={`carousel-main ${utiliseImagesReelles ? "carousel-main-real" : ""}`}>
                 <div className="carousel-slide">
-                    {images.length > 0 ? (
+                    {nombreSlides > 0 ? (
                         <div className="carousel-image-placeholder">
-                            <span
-                                className={`icon-pixel-projet ${classeIconeDetailParCle[images[indexCurrente]]}`}
-                                aria-label={`Image ${indexCurrente + 1} de ${images.length}`}
-                            />
+                            {utiliseImagesReelles ? (
+                                <img
+                                    src={encodeURI(urlImageCourante)}
+                                    alt={`Capture ${indexCurrente + 1} du projet`}
+                                    className="carousel-photo"
+                                />
+                            ) : (
+                                <span
+                                    className={`icon-pixel-projet ${classeIconeDetailParCle[images[indexCurrente]]}`}
+                                    aria-label={`Image ${indexCurrente + 1} de ${images.length}`}
+                                />
+                            )}
                         </div>
                     ) : (
                         <div className="carousel-empty">
@@ -64,19 +82,19 @@ export default function ProjetCarousel({ images, compact = false }: ProjetCarous
                     )}
                 </div>
 
-                {images.length > 1 && (
+                {nombreSlides > 1 && (
                     <>
                         <button
                             className="carousel-nav carousel-prev"
                             onClick={allerPrecedent}
-                            aria-label={`Image précédente (${indexCurrente}/${images.length})`}
+                            aria-label={`Image précédente (${indexCurrente}/${nombreSlides})`}
                         >
                             ‹
                         </button>
                         <button
                             className="carousel-nav carousel-next"
                             onClick={allerSuivant}
-                            aria-label={`Image suivante (${indexCurrente + 2}/${images.length})`}
+                            aria-label={`Image suivante (${indexCurrente + 2}/${nombreSlides})`}
                         >
                             ›
                         </button>
@@ -84,11 +102,11 @@ export default function ProjetCarousel({ images, compact = false }: ProjetCarous
                 )}
             </div>
 
-            {images.length > 0 && (
+            {nombreSlides > 0 && (
                 <div className="carousel-indicators">
-                    {images.map((_, index) => (
+                    {clesSlides.map((cleSlide, index) => (
                         <button
-                            key={index}
+                            key={`slide-${cleSlide}`}
                             className={`carousel-dot ${index === indexCurrente ? "active" : ""}`}
                             onClick={() => allerAIndex(index)}
                             aria-label={`Aller à l'image ${index + 1}`}
@@ -98,9 +116,9 @@ export default function ProjetCarousel({ images, compact = false }: ProjetCarous
                 </div>
             )}
 
-            {images.length > 0 && (
+            {nombreSlides > 0 && (
                 <div className="carousel-counter">
-                    {indexCurrente + 1} / {images.length}
+                    {indexCurrente + 1} / {nombreSlides}
                 </div>
             )}
         </div>

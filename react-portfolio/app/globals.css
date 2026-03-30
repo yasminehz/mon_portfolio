@@ -793,6 +793,21 @@ section {
   gap: 2rem;
 }
 
+.projects-group {
+  margin-bottom: 2.5rem;
+}
+
+.projects-group:last-child {
+  margin-bottom: 0;
+}
+
+.projects-group-title {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin-bottom: 1.25rem;
+  font-family: var(--font-mono);
+}
+
 .project-card {
   background: linear-gradient(135deg, var(--pastel-blue) 0%, var(--warm-accent) 100%);
   border: 3px solid var(--text-dark);
@@ -1590,12 +1605,22 @@ section {
   overflow: hidden;
 }
 
+.carousel-main.carousel-main-real {
+  aspect-ratio: auto;
+  min-height: 320px;
+}
+
 .carousel-compact .carousel-main {
   max-width: 100%;
   margin: 0 0 0.75rem;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   border: 2px solid var(--text-dark);
   box-shadow: var(--shadow-sm);
+}
+
+.carousel-compact .carousel-main.carousel-main-real {
+  aspect-ratio: auto;
+  min-height: 260px;
 }
 
 .carousel-slide {
@@ -1614,6 +1639,31 @@ section {
   width: 100%;
   height: 100%;
   padding: 2rem;
+}
+
+.carousel-main.carousel-main-real .carousel-image-placeholder {
+  padding: 0.75rem;
+}
+
+.carousel-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: var(--warm-light);
+  border-radius: 2px;
+  border: 2px solid var(--text-dark);
+}
+
+.carousel-main.carousel-main-real .carousel-photo {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(70vh, 640px);
+}
+
+.carousel-compact .carousel-main.carousel-main-real .carousel-photo {
+  max-height: min(52vh, 420px);
 }
 
 .carousel-compact .carousel-image-placeholder {
