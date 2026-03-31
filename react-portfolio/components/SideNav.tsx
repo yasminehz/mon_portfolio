@@ -8,11 +8,10 @@ export default function SideNav() {
 
     const elementsNavigation = [
         { href: "/#accueil", label: "Accueil" },
-        { href: "/#todo", label: "TODO" },
-        { href: "/#competences", label: "Compétences" },
-        { href: "/#veille", label: "Veille IA" },
         { href: "/#parcours", label: "Parcours" },
         { href: "/#projets", label: "Projets" },
+        { href: "/#competences", label: "Compétences" },
+        { href: "/#veille", label: "Veille IA" },
         { href: "/#contact", label: "Contact" },
     ];
 
@@ -58,13 +57,13 @@ export default function SideNav() {
 
                 <div className="nav-footer">
                     <div className="social-links">
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <a href="https://github.com/yasminehz" target="_blank" rel="noopener noreferrer" className="social-link">
                             GH
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                        <a href="https://linkedin.com/in/yasmine-henni-zourgui" target="_blank" rel="noopener noreferrer" className="social-link">
                             LI
                         </a>
-                        <a href="mailto:contact@example.com" className="social-link">
+                        <a href="mailto:yasminehenniz@gmail.com" className="social-link">
                             ✉
                         </a>
                     </div>

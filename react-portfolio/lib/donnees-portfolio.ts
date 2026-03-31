@@ -46,12 +46,6 @@ export type ItemVeilleTechnologique = {
   pointsCles: string[];
 };
 
-export const todosPortfolio = [
-  "ajouter liens demo",
-  "tableau compétence",
-  "refaire desc des projets"
-];
-
 export const lienTableauCompetences = "https://docs.google.com/spreadsheets/d/1_8q-UGLzlTKc0yV5ZL1HGw9lEXuxF7RbN6p96MC2bOU/edit?usp=sharing";
 
 export const veilleTechnologiquePortfolio: ItemVeilleTechnologique[] = [
@@ -198,12 +192,12 @@ export const projetsPortfolio: ProjetPortfolio[] = [
     id: 5,
     titre: "Stage Ateja - CRM d'entreprise",
     description:
-      "Projet academique realise en stage chez Ateja : contribution au developpement d'une application CRM web.",
+      "Projet academique réalisé en stage chez Ateja : contribution au développement d'une application CRM web.",
     tags: ["Laravel", "Vue.js", "MySQL", "HTML", "CSS"],
     descriptionLongue:
-      "Pendant mon stage chez Ateja, j'ai participé au developpement d'une application CRM d'entreprise. J'ai travaille sur des modules de gestion de dépendances composer, la gestion de suivi des migrations et l'ajout de condition à la saisie de champs d'un formulaire.",
+      "Développement d'une application CRM d'entreprise. J'ai travaillé sur des modules de gestion de packages composer, la gestion de suivi des migrations et l'ajout de condition à la saisie de champs d'un formulaire.",
     fonctionnalites: [
-      "Participation au developpement de modules CRM",
+      "Participation au développement de modules CRM",
       "Suivi des demandes et organisation des donnees clients",
       "Collaboration en équipe sur des besoins métiers réels",
     ],

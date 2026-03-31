@@ -3,7 +3,6 @@ import {
   lienTableauCompetences,
   parcoursPortfolio,
   projetsPortfolio,
-  todosPortfolio,
   veilleTechnologiquePortfolio,
 } from "@/lib/donnees-portfolio";
 import ProjetCarousel from "@/components/ProjetCarousel";
@@ -72,71 +71,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="todo" className="todo">
-        <div className="container">
-          <h2>#TODO</h2>
-          {todosPortfolio.map((todo) => (
-            <p key={todo}>{todo}</p>
-          ))}
-        </div>
-      </section>
-
-      <section id="competences" className="competences">
-        <div className="container">
-          <h2>Tableau de compétence</h2>
-          <p>Accède à mon tableau de compétence complet via le lien ci-dessous.</p>
-          <a
-            href={lienTableauCompetences}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-          >
-            Ouvrir le tableau de compétence
-          </a>
-        </div>
-      </section>
-
-      <section id="veille" className="veille">
-        <div className="container">
-          <div className="veille-header">
-            <span className="veille-badge">Veille 2026</span>
-            <h2>Veille Technologique : IA et Médecine</h2>
-            <p className="veille-intro">
-              Je fais ma veille avec Feedly sur l'IA appliquée à la santé, avec des sources comment ScienceDaily, The Verge, Le Monde Informatique et bien d'autres sources.
-              J'utilise également Google Scholar pour suivre les publications scientifiques récentes sur le sujet.
-            </p>
-            <a
-              href="https://docs.google.com/document/d/1EfGdjQxKPnP_6yLA0QC7XOVosBGAtRjJv3bljSUgzg0/edit?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary"
-            >
-              Voir ma synthèse
-            </a>
-          </div>
-
-
-
-          <div className="veille-grid">
-            {veilleTechnologiquePortfolio.map((itemVeille, index) => (
-              <article className="veille-card" key={itemVeille.titre}>
-                <div className="veille-card-top">
-                  <span className="veille-card-index">0{index + 1}</span>
-                  <span className="veille-card-tag">IA Santé</span>
-                </div>
-                <h3>{itemVeille.titre}</h3>
-                <p>{itemVeille.resume}</p>
-                <ul>
-                  {itemVeille.pointsCles.map((pointCle) => (
-                    <li key={pointCle}>{pointCle}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="parcours" className="parcours">
         <div className="container">
           <h2>Mon Parcours</h2>
@@ -201,6 +135,60 @@ export default function Home() {
           <div className="projects-group">
             <h3 className="projects-group-title">Projets perso</h3>
             <div className="projects-grid">{projetsPerso.map(renderProjet)}</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="competences" className="competences">
+        <div className="container">
+          <h2>Tableau de compétence</h2>
+          <p>Accède à mon tableau de compétence complet via le lien ci-dessous.</p>
+          <a
+            href={lienTableauCompetences}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+          >
+            Ouvrir le tableau de compétence
+          </a>
+        </div>
+      </section>
+
+      <section id="veille" className="veille">
+        <div className="container">
+          <div className="veille-header">
+            <span className="veille-badge">Veille 2026</span>
+            <h2>Veille Technologique : IA et Médecine</h2>
+            <p className="veille-intro">
+              Je fais ma veille avec Feedly sur l'IA appliquée à la santé, avec des sources comment ScienceDaily, The Verge, Le Monde Informatique et bien d'autres sources.
+              J'utilise également Google Scholar pour suivre les publications scientifiques récentes sur le sujet.
+            </p>
+            <a
+              href="https://docs.google.com/document/d/1EfGdjQxKPnP_6yLA0QC7XOVosBGAtRjJv3bljSUgzg0/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
+            >
+              Voir ma synthèse
+            </a>
+          </div>
+
+          <div className="veille-grid">
+            {veilleTechnologiquePortfolio.map((itemVeille, index) => (
+              <article className="veille-card" key={itemVeille.titre}>
+                <div className="veille-card-top">
+                  <span className="veille-card-index">0{index + 1}</span>
+                  <span className="veille-card-tag">IA Santé</span>
+                </div>
+                <h3>{itemVeille.titre}</h3>
+                <p>{itemVeille.resume}</p>
+                <ul>
+                  {itemVeille.pointsCles.map((pointCle) => (
+                    <li key={pointCle}>{pointCle}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
           </div>
         </div>
       </section>
