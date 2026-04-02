@@ -85,7 +85,7 @@ export const parcoursPortfolio: EtapeParcours[] = [
   {
     periode: "2020 - 2023",
     titre: "Licence Langues étrangères appliquées",
-    sousTitre: "Anglais - Italien",
+    sousTitre: "Anglais - Italien | Université de Lille",
     description:
       "Formation universitaire en langues appliquées aux affaires et au commerce international.",
     type: "formation",
@@ -93,14 +93,14 @@ export const parcoursPortfolio: EtapeParcours[] = [
   {
     periode: "2024 - 2026",
     titre: "BTS SIO option SLAM",
-    sousTitre: "Solutions Logicielles et Applications Métiers",
+    sousTitre: "Solutions Logicielles et Applications Métiers | Lycée Saint Rémi, Roubaix",
     description:
       "Formation en développement d'applications, bases de données et gestion de projets informatiques.",
     type: "formation",
   },
   {
     periode: "2025",
-    titre: "Stage - Développeuse Junior",
+    titre: "Stage - Développeuse Web",
     sousTitre: "Mairie de Tourcoing",
     description:
       "Développement d'une application de gestion de demande de congé.",
@@ -121,15 +121,15 @@ export const projetsPortfolio: ProjetPortfolio[] = [
     id: 1,
     titre: "Site d'une bibliothèque",
     description:
-      "Un site web pour une bibliothèque avec un catalogue de livres, gestion d'utilisateurs et des emprunts.",
+      "Une application web pour une bibliothèque avec un catalogue de livres, gestion d'utilisateurs et des emprunts.",
     tags: ["HTML", "CSS", "PHP", "MySQL"],
     descriptionLongue:
-      "Projet complet d'une plateforme web pour une bibliothèque d'un hôpital. Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer les emprunts et les retours.",
+      "Application web en PHP pour une bibliothèque d'un hôpital. Cette application utilise une structure MVC (modèle, vue, contrôleur). Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer les emprunts et les retours.",
     fonctionnalites: [
       "Système d'authentification utilisateur",
-      "Catalogue de livres avec recherche avancée sur plusieurs filtres",
+      "Catalogue de livres avec recherche sur plusieurs filtres",
       "Gestion des emprunts et retours",
-      "Historique des emprunts",
+      "Gestion des utilisateurs en accord avec les règles de confidentialité des données",
     ],
     images: ["biblio", "recherche", "lecture", "utilisateur"],
     github: "https://github.com",
@@ -142,11 +142,12 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Application de gestion de RDV médicaux. Gestion des utilisateurs patients et médecins, prise de rendez-vous en ligne.",
     tags: ["HTML", "CSS", "Symfony", "MySQL", "React Native"],
     descriptionLongue:
-      "Plateforme web et mobile pour la gestion de rendez-vous médicaux. Les patients peuvent prendre rendez-vous avec des médecins, consulter leur historique. Les médecins gèrent leur disponibilités et les patients. Les assistants gèrent les demandes de son médecin associé. L'application mobile appelle des API de l'application web pour une synchronisation des données en temps réel. L'application a été développée avec Symfony pour le backend et une application mobile React Native pour l'interface patient.",
+      "Application web et mobile pour la gestion de rendez-vous médicaux. Les patients peuvent prendre rendez-vous avec des médecins et consulter leur historique. Les médecins gèrent leur disponibilités et les patients. Les assistants gèrent les demandes de leur médecin associé. L'application mobile appelle des API de l'application Symfony pour une synchronisation des données en temps réel. L'application a été développée avec Symfony pour le backend et une application mobile React Native pour l'interface patient.",
     fonctionnalites: [
+      "Création et authentification des utilisateurs",
       "Prise de rendez-vous en ligne",
       "Enregistrement des indisponibilités des médecins",
-      "Gestion des dossiers médicaux",
+      "Gestion des rendez-vous",
     ],
     images: ["sante", "calendrier", "soignant", "traitement"],
     github: "https://github.com",
@@ -192,14 +193,14 @@ export const projetsPortfolio: ProjetPortfolio[] = [
     id: 5,
     titre: "Stage Ateja - CRM d'entreprise",
     description:
-      "Projet academique réalisé en stage chez Ateja : contribution au développement d'une application CRM web.",
+      "Projet réalisé en stage chez Ateja : contribution au développement d'une application CRM web.",
     tags: ["Laravel", "Vue.js", "MySQL", "HTML", "CSS"],
     descriptionLongue:
-      "Développement d'une application CRM d'entreprise. J'ai travaillé sur des modules de gestion de packages composer, la gestion de suivi des migrations et l'ajout de condition à la saisie de champs d'un formulaire.",
+      "Lors de mon stage de 2ème année, j'ai participé au développement d'une application CRM d'entreprise. J'ai travaillé sur des modules de gestion de packages composer, la gestion de suivi des migrations et l'ajout de condition à la saisie de champs d'un formulaire. L'application utilise Laravel pour le back-end et VueJS pour le front",
     fonctionnalites: [
       "Participation au développement de modules CRM",
-      "Suivi des demandes et organisation des donnees clients",
       "Collaboration en équipe sur des besoins métiers réels",
+      "Développement de mes compétences en programmation et en formation sur de nouvelles technologies"
     ],
     images: ["partage", "validation"],
     github: "https://github.com",

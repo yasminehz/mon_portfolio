@@ -63,11 +63,8 @@ export default function Home() {
     <div className="portfolio-page">
       <section id="accueil" className="hero">
         <div className="container">
-          <h1>Développeuse Web</h1>
-          <p>HTML • CSS • Symfony • Java • ReactNative</p>
-          <a href="#projets" className="btn btn-primary">
-            Voir mes projets
-          </a>
+          <h1>Mon portfolio professionnel</h1>
+          <p>Mon parcours en BTS SIO</p>
         </div>
       </section>
 

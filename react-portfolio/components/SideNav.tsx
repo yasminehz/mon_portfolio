@@ -33,7 +33,7 @@ export default function SideNav() {
                 <div className="nav-header">
                     <div className="nav-branding">
                         <div className="nav-avatar">YH</div>
-                        <div className="nav-name">Yasmine</div>
+                        <div className="nav-name">Yasmine Henni-Zourgui</div>
                     </div>
                 </div>
 
