@@ -2,8 +2,6 @@ import Link from "next/link";
 import {
   parcoursPortfolio,
   projetsPortfolio,
-  todosPortfolio,
-  veilleTechnologiquePortfolio,
 } from "@/lib/donnees-portfolio";
 import ProjetCarousel from "@/components/ProjetCarousel";
 
@@ -17,52 +15,6 @@ export default function Home() {
           <a href="#projets" className="btn btn-primary">
             Voir mes projets
           </a>
-        </div>
-      </section>
-
-      <section id="todo" className="todo">
-        <div className="container">
-          <h2>#TODO</h2>
-          {todosPortfolio.map((todo) => (
-            <p key={todo}>{todo}</p>
-          ))}
-        </div>
-      </section>
-
-      <section id="veille" className="veille">
-        <div className="container">
-          <div className="veille-header">
-            <span className="veille-badge">Veille 2026</span>
-            <h2>Veille Technologique : IA et Médecine</h2>
-            <p className="veille-intro">
-              Cette veille suit les usages concrets de l&apos;IA en santé, leurs apports
-              pour les soignants et les conditions nécessaires pour un usage fiable et éthique.
-            </p>
-          </div>
-
-          <div className="veille-points-cles" aria-label="Points de suivi de la veille">
-            <span>🔎 Cas d&apos;usage</span>
-            <span>🧪 Validation clinique</span>
-            <span>🛡️ Éthique & données</span>
-          </div>
-
-          <div className="veille-grid">
-            {veilleTechnologiquePortfolio.map((itemVeille, index) => (
-              <article className="veille-card" key={itemVeille.titre}>
-                <div className="veille-card-top">
-                  <span className="veille-card-index">0{index + 1}</span>
-                  <span className="veille-card-tag">IA Santé</span>
-                </div>
-                <h3>{itemVeille.titre}</h3>
-                <p>{itemVeille.resume}</p>
-                <ul>
-                  {itemVeille.pointsCles.map((pointCle) => (
-                    <li key={pointCle}>{pointCle}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 

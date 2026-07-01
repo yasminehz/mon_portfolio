@@ -40,57 +40,6 @@ export type EtapeParcours = {
   type: "formation" | "stage";
 };
 
-export type ItemVeilleTechnologique = {
-  titre: string;
-  resume: string;
-  pointsCles: string[];
-};
-
-export const todosPortfolio = [
-  "App biblio",
-  "App comparateur de sab",
-  "App gestion rdv",
-  "veille ia et medecine",
-  "tableau compétence",
-  "App tablier rose formation btech https://yasminehz.github.io/Letablierose/index.html",
-  "App mobile course",
-  "stage premiere année",
-  "stage deuxieme année",
-];
-
-export const veilleTechnologiquePortfolio: ItemVeilleTechnologique[] = [
-  {
-    titre: "Diagnostic assiste par l'IA",
-    resume:
-      "Les modeles d'IA aident les professionnels de sante a detecter plus vite certaines anomalies sur des images medicales.",
-    pointsCles: [
-      "Analyse d'images en radiologie et dermatologie",
-      "Aide a la decision, sans remplacer le medecin",
-      "Besoin de validation clinique continue",
-    ],
-  },
-  {
-    titre: "Medecine personnalisee",
-    resume:
-      "L'IA facilite l'analyse de grandes quantites de donnees pour adapter les traitements au profil du patient.",
-    pointsCles: [
-      "Croisement donnees biologiques et historiques patients",
-      "Prediction des reponses aux traitements",
-      "Suivi plus fin de l'evolution clinique",
-    ],
-  },
-  {
-    titre: "Enjeux et vigilance",
-    resume:
-      "L'usage de l'IA en medecine doit rester encadre pour proteger les patients et garantir la fiabilite des systemes.",
-    pointsCles: [
-      "Protection des donnees de sante",
-      "Reduction des biais algorithmiques",
-      "Transparence et explicabilite des modeles",
-    ],
-  },
-];
-
 export const parcoursPortfolio: EtapeParcours[] = [
   {
     periode: "2020 - 2023",
