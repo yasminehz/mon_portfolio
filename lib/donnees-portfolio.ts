@@ -25,6 +25,11 @@ export type ItemVeilleTechnologique = {
   pointsCles: string[];
 };
 
+export const withBasePath = (path: string) => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  return `${basePath}${path}`;
+};
+
 export const lienTableauCompetences = "https://docs.google.com/spreadsheets/d/1_8q-UGLzlTKc0yV5ZL1HGw9lEXuxF7RbN6p96MC2bOU/edit?usp=sharing";
 
 export const veilleTechnologiquePortfolio: ItemVeilleTechnologique[] = [
@@ -111,9 +116,9 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Gestion des utilisateurs en accord avec les règles de confidentialité des données",
     ],
     images: [
-      "/projets/projet-2-bibliotheque/biblio-new-1.png",
-      "/projets/projet-2-bibliotheque/biblio-new-2.png",
-      "/projets/projet-2-bibliotheque/biblio-new-3.png",
+      withBasePath("/projets/projet-2-bibliotheque/biblio-new-1.png"),
+      withBasePath("/projets/projet-2-bibliotheque/biblio-new-2.png"),
+      withBasePath("/projets/projet-2-bibliotheque/biblio-new-3.png"),
     ],
     github: "https://github.com",
     live: "#",
@@ -133,11 +138,11 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Gestion des rendez-vous",
     ],
     images: [
-      "/projets/projet-1-gestionRDV/rdv-new-1.png",
-      "/projets/projet-1-gestionRDV/rdv-new-2.png",
-      "/projets/projet-1-gestionRDV/rdv-new-3.png",
-      "/projets/projet-1-gestionRDV/rdv-new-4.png",
-      "/projets/projet-1-gestionRDV/rdv-new-5.png",
+      withBasePath("/projets/projet-1-gestionRDV/rdv-new-1.png"),
+      withBasePath("/projets/projet-1-gestionRDV/rdv-new-2.png"),
+      withBasePath("/projets/projet-1-gestionRDV/rdv-new-3.png"),
+      withBasePath("/projets/projet-1-gestionRDV/rdv-new-4.png"),
+      withBasePath("/projets/projet-1-gestionRDV/rdv-new-5.png"),
     ],
     github: "https://github.com",
     live: "#",
@@ -151,7 +156,7 @@ export const projetsPortfolio: ProjetPortfolio[] = [
     descriptionLongue:
       "Outil interactif pour les pâtissiers permettant de calculer le prix de vente d'un gâteau en fonction des coûts des matières premières. ",
     fonctionnalites: ["Calcul automatique des coûts"],
-    images: ["/projets/projet-3-comparateur-prix/prix-new-1.png"],
+    images: [withBasePath("/projets/projet-3-comparateur-prix/prix-new-1.png")],
     github: "https://github.com",
     live: "#",
   },
@@ -168,8 +173,8 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Galerie de projets",
     ],
     images: [
-      "/projets/projet-4-tablier-rose/tablier-new-1.png",
-      "/projets/projet-4-tablier-rose/tablier-new-2.png",
+      withBasePath("/projets/projet-4-tablier-rose/tablier-new-1.png"),
+      withBasePath("/projets/projet-4-tablier-rose/tablier-new-2.png"),
     ],
     github: "https://github.com",
     live: "#",
@@ -189,8 +194,8 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Développement de mes compétences en programmation et en formation sur de nouvelles technologies",
     ],
     images: [
-      "/projets/projet-5-stage-ateja/sanstitre1.png",
-      "/projets/projet-5-stage-ateja/sanstitre2.png",
+      withBasePath("/projets/projet-5-stage-ateja/sanstitre1.png"),
+      withBasePath("/projets/projet-5-stage-ateja/sanstitre2.png"),
     ],
     github: "https://github.com",
     live: "#",
