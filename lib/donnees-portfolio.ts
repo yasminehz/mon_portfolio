@@ -194,8 +194,8 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Développement de mes compétences en programmation et en formation sur de nouvelles technologies",
     ],
     images: [
-      withBasePath("/projets/projet-5-stage-ateja/sanstitre1.png"),
-      withBasePath("/projets/projet-5-stage-ateja/sanstitre2.png"),
+      withBasePath("/projets/projet-5-stage-ateja/Sans titre.png"),
+      withBasePath("/projets/projet-5-stage-ateja/Sans titre2.png"),
     ],
     github: "https://github.com",
     live: "#",
