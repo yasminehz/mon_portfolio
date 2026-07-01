@@ -5,32 +5,11 @@ export type ProjetPortfolio = {
   tags: string[];
   descriptionLongue: string;
   fonctionnalites: string[];
-  images: CleImageProjet[];
+  images: string[];
   github: string;
   live: string;
+  demo?: string;
 };
-
-export type CleImageProjet =
-  | "biblio"
-  | "recherche"
-  | "lecture"
-  | "utilisateur"
-  | "sante"
-  | "calendrier"
-  | "soignant"
-  | "traitement"
-  | "cupcake"
-  | "prix"
-  | "statistiques"
-  | "gateau"
-  | "vitrine"
-  | "dessert"
-  | "avis"
-  | "contact"
-  | "panier"
-  | "mobile"
-  | "validation"
-  | "partage";
 
 export type EtapeParcours = {
   periode: string;
@@ -83,15 +62,18 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Un site web pour une bibliothèque avec un catalogue de livres, gestion d'utilisateurs et des emprunts.",
     tags: ["HTML", "CSS", "PHP", "MySQL"],
     descriptionLongue:
-      "Projet complet d'une plateforme web pour une bibliothèque municipale. Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer l'inventaire, les emprunts et les retours.",
+      "Application web en PHP pour une bibliothèque d'un hôpital. Cette application utilise une structure MVC (modèle, vue, contrôleur). Les utilisateurs peuvent consulter le catalogue de livres, rechercher par titre ou auteur, créer un compte et emprunter des livres. Les administrateurs peuvent gérer les emprunts et les retours.",
     fonctionnalites: [
-      "Catalogue de livres avec recherche avancée",
       "Système d'authentification utilisateur",
+      "Catalogue de livres avec recherche sur plusieurs filtres",
       "Gestion des emprunts et retours",
-      "Historique des emprunts",
-      "Notifications de rappel",
+      "Gestion des utilisateurs en accord avec les règles de confidentialité des données"
     ],
-    images: ["biblio", "recherche", "lecture", "utilisateur"],
+    images: [
+      "/projets/projet-2-bibliotheque/biblio-new-1.png",
+      "/projets/projet-2-bibliotheque/biblio-new-2.png",
+      "/projets/projet-2-bibliotheque/biblio-new-3.png",
+    ],
     github: "https://github.com",
     live: "#",
   },
@@ -102,15 +84,20 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Application de gestion de RDV médicaux. Gestion des utilisateurs patients et médecins, prise de rendez-vous en ligne.",
     tags: ["HTML", "CSS", "Symfony", "MySQL"],
     descriptionLongue:
-      "Plateforme web pour la gestion de rendez-vous médicaux. Les patients peuvent prendre rendez-vous avec des médecins, consulter leur historique et recevoir des confirmations. Les médecins gèrent leur agenda et les patients.",
+      "Application web et mobile pour la gestion de rendez-vous médicaux. Les patients peuvent prendre rendez-vous avec des médecins et consulter leur historique. Les médecins gèrent leur disponibilités et les patients. Les assistants gèrent les demandes de leur médecin associé. L'application mobile appelle des API de l'application Symfony pour une synchronisation des données en temps réel. L'application a été développée avec Symfony pour le backend et une application mobile React Native pour l'interface patient.",
     fonctionnalites: [
+      "Création et authentification des utilisateurs",
       "Prise de rendez-vous en ligne",
-      "Calendrier pour les médecins et patients",
-      "Notifications par email",
-      "Gestion des dossiers médicaux",
-      "Système de rappel automatique",
+      "Enregistrement des indisponibilités des médecins",
+      "Gestion des rendez-vous"
     ],
-    images: ["sante", "calendrier", "soignant", "traitement"],
+    images: [
+      "/projets/projet-1-gestionRDV/rdv-new-1.png",
+      "/projets/projet-1-gestionRDV/rdv-new-2.png",
+      "/projets/projet-1-gestionRDV/rdv-new-3.png",
+      "/projets/projet-1-gestionRDV/rdv-new-4.png",
+      "/projets/projet-1-gestionRDV/rdv-new-5.png",
+    ],
     github: "https://github.com",
     live: "#",
   },
@@ -121,15 +108,11 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Application pour calculer le prix de vente de gâteaux en fonction des coûts des ingrédients",
     tags: ["HTML", "CSS", "JavaScript"],
     descriptionLongue:
-      "Outil interactif pour les pâtissiers permettant de calculer le prix de vente optimal en fonction des coûts des matières premières. L'application prend en compte les marges bénéficiaires et le temps de préparation.",
+      "Outil interactif pour les pâtissiers permettant de calculer le prix de vente d'un gâteau en fonction des coûts des matières premières. L'application prend en compte les marges bénéficiaires et le temps de préparation.",
     fonctionnalites: [
       "Calcul automatique des coûts",
-      "Gestion de la marge bénéficiaire",
-      "Export des données",
-      "Historique des calculs",
-      "Interface intuitive et rapide",
     ],
-    images: ["cupcake", "prix", "statistiques", "gateau"],
+    images: ["/projets/projet-3-comparateur-prix/prix-new-1.png"],
     github: "https://github.com",
     live: "#",
   },
@@ -143,32 +126,36 @@ export const projetsPortfolio: ProjetPortfolio[] = [
       "Site professionnel pour une pâtisserie locale. Les clients peuvent découvrir les produits, lire les avis, consulter les horaires d'ouverture et contacter directement le commerce via un formulaire.",
     fonctionnalites: [
       "Catalogue de produits avec photos",
-      "Système d'avis clients",
       "Formulaire de contact",
-      "Informations de localisation",
-      "Galerie de projets personnalisés",
+      "Galerie de projets",
     ],
-    images: ["vitrine", "dessert", "avis", "contact"],
+    images: [
+      "/projets/projet-4-tablier-rose/tablier-new-1.png",
+      "/projets/projet-4-tablier-rose/tablier-new-2.png",
+    ],
     github: "https://github.com",
     live: "#",
+    demo: "https://yasminehz.github.io/Letablierose/index.html",
   },
   {
     id: 5,
-    titre: "Appli mobile de liste de course",
+    titre: "Stage Ateja - Application de CRM",
     description:
-      "Application mobile pour créer et gérer des listes de courses, avec gestion de compte.",
-    tags: ["HTML", "CSS", "ReactNative"],
+      "Projet réalisé en stage chez Ateja : contribution au développement d'une application CRM web.",
+    tags: ["HTML", "CSS", "Laravel", "MySQL", "Vue.js"],
     descriptionLongue:
-      "Application mobile native permettant aux utilisateurs de créer et gérer des listes de courses en temps réel. Synchronisation cloud pour accéder à vos listes depuis n'importe quel appareil.",
+      "Lors de mon stage de 2ème année, j'ai participé au développement d'une application CRM d'entreprise. J'ai travaillé sur des modules de gestion de packages composer, la gestion de suivi des migrations et l'ajout de condition à la saisie de champs d'un formulaire. L'application utilise Laravel pour le back-end et VueJS pour le front-end, avec une base de données MySQL pour le stockage des données.",
     fonctionnalites: [
-      "Création et édition de listes",
-      "Synchronisation cloud",
-      "Partage de listes avec la famille",
-      "Gestion des catégories",
-      "Notification pour les articles manquants",
+      "Participation au développement de modules CRM",
+      "Collaboration en équipe sur des besoins métiers réels",
+      "Développement de mes compétences en programmation et en formation sur de nouvelles technologies",
     ],
-    images: ["panier", "mobile", "validation", "partage"],
+    images: [
+      "/projets/projet-5-stage-ateja/sanstitre1.png",
+      "/projets/projet-5-stage-ateja/sanstitre2.png",
+    ],
     github: "https://github.com",
     live: "#",
   },
+
 ];
